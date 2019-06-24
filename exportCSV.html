@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script> -->
+    <script src="./exportCSV.js"></script>
+  </head>
+  <body>
+
+  <button type="button" onclick="output();return false;">CSV</button>
+
+  <script>
+      jsonHeader = ['URL', '要素名', 'テキスト', 'コード'];
+    jsondata = [
+      {'addresscode':'534000000', 'prefcode': '27', 'addressname': '大阪市都島区 '},
+      {'addresscode':'534002600', 'prefcode': '27', 'addressname': '大阪市都島区 網島町'},
+      {'addresscode':'534001300', 'prefcode': '27', 'addressname': '大阪市都島区 内代町'},
+      {'addresscode':'534002500', 'prefcode': '27', 'addressname': '大阪市都島区 片町'},
+      {'addresscode':'534000100', 'prefcode': '27', 'addressname': '大阪市都島区 毛馬町'},
+      {'addresscode':'534001500', 'prefcode': '27', 'addressname': '大阪市都島区 善源寺町'},
+      {'addresscode':'534000200', 'prefcode': '27', 'addressname': '大阪市都島区 大東町'},
+      {'addresscode':'534001100', 'prefcode': '27', 'addressname': '大阪市都島区 高倉町'},
+      {'addresscode':'534001600', 'prefcode': '27', 'addressname': '大阪市都島区 友渕町'},
+      {'addresscode':'534002700', 'prefcode': '27', 'addressname': '大阪市都島区 中野町'},
+      {'addresscode':'534002400', 'prefcode': '27', 'addressname': '大阪市都島区 東野田町'},
+      {'addresscode':'534001400', 'prefcode': '27', 'addressname': '大阪市都島区 都島北通'},
+      {'addresscode':'534002200', 'prefcode': '27', 'addressname': '大阪市都島区 都島中通'},
+      {'addresscode':'534002100', 'prefcode': '27', 'addressname': '大阪市都島区 都島本通'},
+      {'addresscode':'534002300', 'prefcode': '27', 'addressname': '大阪市都島区 都島南通'},
+      {'addresscode':'534001200', 'prefcode': '27', 'addressname': '大阪市都島区 御幸町'},
+      {'addresscode':'553000000', 'prefcode': '27', 'addressname': '大阪市福島区 '},
+      {'addresscode':'553000100', 'prefcode': '27', 'addressname': '大阪市福島区 海老江'},
+      {'addresscode':'553000700', 'prefcode': '27', 'addressname': '大阪市福島区 大開'},
+      {'addresscode':'553000200', 'prefcode': '27', 'addressname': '大阪市福島区 鷺洲'},
+      {'addresscode':'553000400', 'prefcode': '27', 'addressname': '大阪市福島区 玉川'},
+      {'addresscode':'553000500', 'prefcode': '27', 'addressname': '大阪市福島区 野田'},
+      {'addresscode':'553000300', 'prefcode': '27', 'addressname': '大阪市福島区 福島'},
+      {'addresscode':'553000600', 'prefcode': '27', 'addressname': '大阪市福島区 吉野'},
+    ];
+    var filename = 'サンプル';
+
+    function output(){
+        exportCSV(jsonHeader, jsondata,',', filename);
+    }
+  </script>
+  </body>
+</html>
